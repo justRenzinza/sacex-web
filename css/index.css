@@ -66,6 +66,7 @@ body {
 
 .ads-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 20px;
     padding-top: 15px;
@@ -74,7 +75,7 @@ body {
 
 .ad {
     flex: 1;
-    height: 100%; 
+    height: auto; 
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
@@ -171,3 +172,130 @@ body {
     display: block;  
     text-align: right;
 }
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .logo {
+        width: 120px;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .nav {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .nav li {
+        padding: 5px 10px;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .ads-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .ad {
+        max-width: 100%;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 18px;
+    }
+
+    .card-footer,
+    .info {
+        font-size: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .data-atual {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .nav li {
+        width: 50%;
+        font-size: 14px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-left: 101.25px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .content {
+        padding: 8px;
+    }
+
+    .ads-container {
+        gap: 8px;
+    }
+
+    .ad img {
+        border-radius: 8px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .card h2,
+    .card p {
+        font-size: 16px;
+    }
+
+    .card-footer,
+    .info {
+        font-size: 11px;
+    }
+
+    .variation {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
