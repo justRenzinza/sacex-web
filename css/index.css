@@ -63,25 +63,24 @@ body {
 }
 
 .ads-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     margin-bottom: 20px;
     padding-top: 15px;
     text-align: center;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
 .ad {
-    flex: 1;
-    height: 100%; 
+    aspect-ratio: 16 / 8;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
     object-fit: cover; 
-    width: 100%;
     display: block;
     cursor: pointer;
-    margin-bottom: 10px;
+    overflow: hidden;
 }
 
 .ad:hover {
@@ -89,8 +88,8 @@ body {
 }
 
 .ad img {
-    max-width: 100%;
-    max-height: 100%; 
+    width: 100%;
+    height: 100%; 
     object-fit: cover;
     display: block;
     border-radius: 10px;
@@ -209,6 +208,7 @@ footer nav .navegacao a img {
     margin-bottom: 20px;
     background-color: transparent;
     display: block;
+    position: fixed;
     mix-blend-mode: multiply;
     margin-left: auto;
     margin-right: auto;
@@ -227,9 +227,7 @@ footer nav .navegacao a img {
     }
 
     .ads-container {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .card {
@@ -239,6 +237,19 @@ footer nav .navegacao a img {
     #bem-vindo{
         visibility: hidden;
         position: fixed;
+    }
+
+    #logo-2{
+        width: 192px;
+        height: 53px;
+        margin-bottom: 20px;
+        background-color: transparent;
+        display: block;
+        position: relative;
+        mix-blend-mode: multiply;
+        margin-left: auto;
+        margin-right: auto;
+        visibility: visible;
     }
 }
 
@@ -250,35 +261,44 @@ footer nav .navegacao a img {
 
     footer nav {
         visibility: visible;
-        /*height: 70px; sem o p*/
         height: 50px;
         bottom: 0;
         left: 0;
         width: 100%;
-
     }
 
     .ads-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    .ad{
-        width: 48%;
-        margin-bottom: 10px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .card {
         width: 100%;
         padding: 10px;
+        margin-bottom: 15px;
     }
 
-    .cards-container{
+    .cards-container {
         flex-direction: column;
         gap: 1px;
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+
+    #logo-2 {
+        width: 192px;
+        height: 53px;
+        margin-bottom: 20px;
+        background-color: transparent;
+        display: block;
+        mix-blend-mode: multiply;
+        margin-left: auto;
+        margin-right: auto;
+        visibility: visible;
+        position: relative;
+    }
+
+    #excluir{
+        visibility: hidden;
+        position: fixed;
     }
 }
