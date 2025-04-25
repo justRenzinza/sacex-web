@@ -57,6 +57,84 @@ body {
     background: rgba(255, 255, 255, 0.4);
 }
 
+.content:has(.login-wrapper) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0; /* opcional: remove o padding lateral */
+}
+
+.login-wrapper {
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-form input{
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button{
+    padding: 10px;
+    background-color: #6F4E37;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form button:hover{
+    background-color: #5a3d2e;
+}
+
+.login-links {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+}
+
+.login-links a {
+    color: #6F4E37;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.login-links a:hover {
+    color: #4d3426;
+}
+
 .content {
     flex-grow: 1;
     padding: 12px;
@@ -174,7 +252,6 @@ body {
     text-align: right;
 }
 
-/* Footer */
 footer nav {
     position: fixed;
     bottom: 0;
