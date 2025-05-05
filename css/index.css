@@ -32,6 +32,15 @@ body {
     mix-blend-mode: multiply;
 }
 
+.logo2{
+    width: 239px;
+    height: auto;
+    margin: 20px;
+    margin-top: 420px;
+    background-color: transparent;
+    display: block;
+}
+
 .nav{
     list-style: none;
     width: 100%;
