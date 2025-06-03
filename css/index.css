@@ -21,6 +21,7 @@ body {
     align-items: center;
     color: white;
     transition: transform 0.3s ease-in-out;
+    height: 1000px;
 }
 
 .logo {
@@ -36,9 +37,10 @@ body {
     width: 239px;
     height: auto;
     margin: 20px;
-    margin-top: 420px;
+    margin-top: 360px;
     background-color: transparent;
-    display: block;
+    display: flex;
+    position: sticky;
 }
 
 .nav{
@@ -64,6 +66,16 @@ body {
 
 .nav li:hover {
     background: rgba(255, 255, 255, 0.4);
+}
+
+.whatsapp-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1);
 }
 
 .content:has(.login-wrapper) {
@@ -160,7 +172,7 @@ body {
 }
 
 .ad {
-    aspect-ratio: 2 / 2;
+    aspect-ratio: 16 / 11;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
